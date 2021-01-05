@@ -8,7 +8,7 @@ pipeline {
 	    }
         stage ('Build & Install') {
             steps {
-                bat "\"${tool 'MSBuild'}\\msbuild\" deploy.proj /p:Configuration=Release /t:Clean"
+                bat "\"${tool 'MSBuild'}\\msbuild\" deploy.proj /p:Configuration=Release"
             }
         }
     }
